@@ -1,8 +1,6 @@
 import company.models.Manager;
 import company.models.Worker;
 import company.abstracts.Employee;
-import java.util.ArrayList;
-import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -12,20 +10,18 @@ public class Main {
         Worker worker4 = new Worker("Marcel", 4900, 4, "19-05-2023", "Detailer");
         Manager manager = new Manager("Antoni", 7000, 5, "25-03-2022", "Manager");
 
-        List<Employee> employees = new ArrayList<>();
-        employees.add(worker1);
-        employees.add(worker2);
-        employees.add(worker3);
-        employees.add(worker4);
-        employees.add(manager);
+        Employee[] employees = {worker1, worker2, worker3, worker4, manager}; 
 
+        
         for (Employee employee : employees) {
-            employee.work(); 
-            System.out.println("- " + employee.getName() +
-                " (ID: " + employee.getId() + 
-                ", Stanowisko: " + employee.getPosition() + 
-                ", Data zatrudnienia: " + employee.getHireDate() + 
-                ", Wyplata: " + employee.getSalary() + ").");
+            System.out.println(employee.getName() + " has code: " + employee.hashCode());
+        }
+
+        
+        System.out.println("Test id " + worker2.getName() + " z innymi pracownikami:");
+        for (Employee employee : employees) {
+            boolean isEqual = worker2.equals(employee);
+            System.out.println(worker2.getName() + " rowna sie " + employee.getName() + ": " + isEqual);
         }
     }
 }
