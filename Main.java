@@ -52,9 +52,9 @@ public class Main {
         }
 
         
-        System.out.println("Laczna wyplata: $" + totalSalary);
-        System.out.println("Laczna wyplata dla menadzerow: $" + totalManagerSalary);
-        System.out.println("Laczna wyplata dla pracownikow: $" + totalWorkerSalary);
+        System.out.println("Laczna wyplata: " + totalSalary);
+        System.out.println("Laczna wyplata dla menadzerow: " + totalManagerSalary);
+        System.out.println("Laczna wyplata dla pracownikow: " + totalWorkerSalary);
 
         
         System.out.println("Przypadki zdublowanmego ID:");
